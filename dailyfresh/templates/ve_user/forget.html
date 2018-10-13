@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>忘记密码</title>
+    <style>
+    .out{
+        width: 500px;
+        height: 900px;
+        margin: 0 auto;
+        margin-top: 100px;
+    }
+  </style>
+</head>
+<body>
+　　<div class="out">
+        <h1>真粗心，忘了密码吧？快通过邮箱找回密码吧</h1>
+        <form method="post" action="/user/forget_handle">
+            {% csrf_token %}
+            <p><span>邮箱：</span><input type="text" name="email"></p>
+            <P>{{msg}}</P>
+            <p><input type="submit" value="确认发送验证邮件"></p>
+        </form>
+    　　<h1></h1>
+   </div>
+</body>
+</html>
